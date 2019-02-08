@@ -7,8 +7,9 @@ import { TestService } from './test.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor() {
-    let srv = new TestService();
-    srv.printToConsole('Rahul');
+
+  constructor(private srv: TestService) {
+    this.srv.printToConsole('Rahul Goti');
   }
+
 }

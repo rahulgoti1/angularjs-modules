@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestService } from 'src/app/test.service';
 
 @Component({
   selector: 'app-view-component',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private srv: TestService) {
+    this.srv.printToConsole('From inner module/component');
+  }
 
   ngOnInit() {
   }
