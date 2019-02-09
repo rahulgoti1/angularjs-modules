@@ -1,3 +1,10 @@
-<p>
-  view-component works!
-</p>
+Username : <input type="text" [(ngModel)]="userName" />
+<button (click)="search()">Search</button>
+<br>
+<br>
+<div *ngIf="response">
+  <p> Login Name : {{response.login}}</p>
+  <p> Followers : {{response.followers}}</p>
+  <p> Followings : {{response.following}}</p>
+  <p> Avatar: <img src="{{response.avatar_url}}" title="Avatar"></p>
+</div>
